@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aula HTML</title>
+    <link rel="shortcut icon" href="Marry logo.ico" type="image/x-icon">
+    <style>
+    .container {
+    
+        display: flex;
+        height: 100vh;
+        
+    }
+    
+    .sidebar {
+        width: 200px;
+        background-color: rgb(41, 41, 41);
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease-out;
+        transform: translateX(-200px);
+        color: rgb(255, 255, 255);
+        
+    }
+    
+    .sidebar a{
+        text-decoration: none;
+        color: white;
+        margin-left: 30px;
+        margin-top: 100px;
+        margin-bottom: 70px;
+    }
+    
+    .sidebar.open {
+        transform: translateX(0);
+    }
+    
+    .content {
+        flex: 1;
+        background-image: url(background3.jpg);
+        background-color: rgb(70, 70, 70);
+        color: black;
+    }
+    
+    .content img{
+        position: absolute;
+        height: 300px;
+        width: 500px;
+        margin-left: 200px;
+        margin-top: 150px;
+    }
+    .content h1{
+        font-size: 1.6em;
+        margin-left: 200px;
+        margin-top: 70px;
+    }
+    .content p{
+        margin-top: 430px;
+        margin-left: 750px;
+    }
+    .content a{
+        color: white;
+        text-decoration: none;
+       transition: 0.3s;
+    }
+    .content a:hover{
+        text-decoration: underline;
+        
+    }
+    
+    .toggle-btn {
+        background-color: transparent;
+        color: black;
+        position: absolute ;
+        top: 10px;
+        left: 10px;
+        z-index: 1;
+        cursor: pointer;
+        border: none;
+    }
+    </style>
+</head>
+<body style="background-color: rgb(138, 138, 138);">
+    <div class="container">
+        <div class="sidebar">
+            <!-- Conteúdo da sidebar -->
+            <h1 style="margin-left: 50px;">MySQL</h1>
+
+            <a href="#">Introdução ao MySQL</a>
+            <hr>
+            <a href="">Elementos e tags</a>
+            <hr>
+            <a href="#">Links</a>
+            <hr>
+            <a href="#">Meta, title, Atributos</a>
+            <hr>
+            <a href="#">Extensão Live Server</a>
+            <hr>
+            <a href="#">Títulos e parágrafos</a>
+            <hr>
+            <a href="#">Comentários</a>
+            <hr>
+            <a href="#">Formatação de texto</a>
+            <hr>
+            <a href="#">Quebra de Linha</a>
+            <hr>
+        </div>
+        <div class="content">
+            <!-- Conteúdo principal --> 
+            
+            <button class="toggle-btn" onclick="toggleSidebar()" style="font-size: 2em;"><ion-icon name="list-outline"></ion-icon></button>
+            <img src="sqlintro.jpg" alt="htmlintro" >
+            <a href="/servico.html" style="font-size: 1.4em; margin-left: 1050px; ">Cursos</a>
+            <h1>Introdução ao MySQL</h1>
+            <p>Quer tentar fazer a prova para o certificado? <a href="#" >Aperte aqui</a></p>
+           
+        </div>
+    </div>
+    <script >function toggleSidebar() {
+        var sidebar = document.querySelector('.sidebar');
+        sidebar.classList.toggle('open');
+    }
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marry Project | Cursos</title>
+    <link rel="shortcut icon" href="Marry logo.ico" type="image/x-icon">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+body{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('background3.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+        header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.navegacao a{
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+
+}
+
+.navegacao a::after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navegacao a:hover::after{
+    transform-origin: right;
+    transform: scaleX(1);
+}
+
+.card{
+            width: 150px;
+            height: 200px;
+            background-color: #333;
+            border-radius: 10px;
+            outline: 1px solid rgba(255, 255, 255, .5);
+            outline-offset: -8px;
+            box-shadow: 3px 3px 10px
+            rgba(0, 0, 0, 1);
+            position: relative;
+            overflow: hidden;
+
+            }
+        .card-image{
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .6;
+            transition: transform .75s;
+
+        }    
+        .card:hover .card-image{
+            transform: scale(1.15);
+
+        }
+        .card-title{
+            position: absolute;
+            left: 15px;
+            bottom: 7px;
+            font-size: 20px;
+            text-shadow: 0 0 1px
+            rgba(0, 0, 0, 0.5);
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2 class="logo"><a href="/index.html"><img src="Group 9.png" alt="logo"></a></h2>
+        <nav class="navegacao">
+            <a href=/index.html>Início</a>
+            <a href="/sobre-nos.html">Sobre Nós</a>
+            <a href=/e-sport.html>e-Sports</a>
+            <a href=/servico.html>Cursos</a>
+            <a href=/contato.html>Contato</a>
+        </nav>
+    </header>
+    <a href="/aulahtml.html">
+    <div class="card" style="margin: 250px 0px 0px 200px;">
+        <img src="front1.jpeg" alt="" class="card-image">
+        <h4 class="card-title">Front-End</h4>
+    </div> 
+    </a>
+
+    <a href="aulasql.html">
+    <div class="card" style="margin: -197px 0px 0px 400px;">
+        <img src="back1.jpeg" alt="" class="card-image">
+        <h4 class="card-title">Back-end</h4>
+    </div>
+    </a>
+
+    <a>
+    <div class="card" style="margin: -197px 0px 0px 600px;">
+        <img src="mobile1.jpeg" alt="" class="card-image">
+        <h4 class="card-title">Mobile</h4>
+    </div>
+    </a>
+
+    <a>
+    <div class="card" style="margin: -197px 0px 0px 800px;">
+        <img src="dp1.jpeg" alt="" class="card-image"> 
+        <h4 class="card-title">Desenvol vimento Pessoal</h4>
+    </div>
+    </a>
+
+    <a href="https://www.cursoemvideo.com/curso/photoshop/" target="_blank">
+    <div class="card" style="margin: -197px 0px 0px 1000px;">
+        <img src="dg1.jpeg" alt="" class="card-image">
+        <h4 class="card-title">Designer Gráfico</h4>
+    </div>  
+</a>
+</body>
+</html>
